@@ -74,11 +74,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "dev": "concurrently \"npm run start\" \"cd client && npm run start\"",
-    "frontend-install": "cd client && npm install",
-    "frontend-build": "cd client && npm run build",
-    "build": "npm install && npm run frontend-install && npm run frontend-build"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
